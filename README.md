@@ -1,5 +1,5 @@
 # pathfinder-systemd
-Starknet pathfinder configuration to run as systemd service
+Starknet [pathfinder](https://github.com/eqlabs/pathfinder) configuration to run as systemd service
 
 ## Prerequisites
 
