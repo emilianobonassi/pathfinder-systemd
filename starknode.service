@@ -1,0 +1,13 @@
+[Unit]
+Description=StarkNet Node
+Wants=network-online.target
+After=network-online.target
+[Service]
+User=starknode
+Group=starknode
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/usr/bin/bash -c "/usr/bin/docker run --rm -i --user $(/usr/bin/id -u):$(/usr/bin/id -g) -e RUST_LOG=info -p 9545:9545 -v /mnt/starkdata:/usr/share/pathfinder/data eqlabs/pathfinder:v0.1.4-alpha --http-rpc '0.0.0.0:9545' --ethereum.url  https://goerli.infura.io/v3/<INFURAKEY>"
+[Install]
+WantedBy=multi-user.target
