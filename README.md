@@ -21,7 +21,7 @@ chown starknode.starknode /mnt/starkdata
 3. Replace `INFURAKEY` in `starknode.service` with yours. If you don't have, [create](https://infura.io/register) a free one.
 4. Copy `starknode.service` to `/etc/systemd/system`, reload system services and enable the service on restart
 ```
-cp starknode.starknode /etc/systemd/system
+cp starknode.service /etc/systemd/system
 systemctl daemon-reload
 systemctl enable starknode
 ```
